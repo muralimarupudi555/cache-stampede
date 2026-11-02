@@ -1,0 +1,68 @@
+{
+  "experiment": "e2_the_ttl_is_the_wrong_knob",
+  "request_rate": 200.0,
+  "origin_seconds": 0.05,
+  "duration_seconds": 10.0,
+  "rows": [
+    {
+      "ttl_seconds": 0.25,
+      "stampede_size": 11,
+      "typical_stampede": 11.0,
+      "predicted_stampede": 11,
+      "stampedes": 29,
+      "predicted_stampedes": 33.33,
+      "origin_calls": 316,
+      "hit_rate": 0.842,
+      "predicted_hit_rate": 0.816667,
+      "pool_saturated": false
+    },
+    {
+      "ttl_seconds": 0.5,
+      "stampede_size": 11,
+      "typical_stampede": 11.0,
+      "predicted_stampede": 11,
+      "stampedes": 17,
+      "predicted_stampedes": 18.18,
+      "origin_calls": 181,
+      "hit_rate": 0.9095,
+      "predicted_hit_rate": 0.9,
+      "pool_saturated": false
+    },
+    {
+      "ttl_seconds": 1.0,
+      "stampede_size": 11,
+      "typical_stampede": 11.0,
+      "predicted_stampede": 11,
+      "stampedes": 10,
+      "predicted_stampedes": 9.52,
+      "origin_calls": 110,
+      "hit_rate": 0.945,
+      "predicted_hit_rate": 0.947619,
+      "pool_saturated": false
+    },
+    {
+      "ttl_seconds": 2.0,
+      "stampede_size": 11,
+      "typical_stampede": 11.0,
+      "predicted_stampede": 11,
+      "stampedes": 5,
+      "predicted_stampedes": 4.88,
+      "origin_calls": 54,
+      "hit_rate": 0.973,
+      "predicted_hit_rate": 0.973171,
+      "pool_saturated": false
+    }
+  ],
+  "predicted_stampede": 11,
+  "stampede_size_unchanged_by_ttl": true,
+  "stampede_count_falls_with_ttl": true,
+  "hit_rate_climbs_with_ttl": true,
+  "total_calls_fall_with_ttl": true,
+  "shortest_ttl": 0.25,
+  "longest_ttl": 2.0,
+  "shortest_ttl_hit_rate": 0.842,
+  "longest_ttl_hit_rate": 0.973,
+  "shortest_ttl_calls": 316,
+  "longest_ttl_calls": 54,
+  "calls_reduction": 5.9
+}

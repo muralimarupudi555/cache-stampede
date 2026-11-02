@@ -1,0 +1,175 @@
+{
+  "metrics": {
+    "base_rate": 200,
+    "base_origin_ms": 50,
+    "base_stampede": 11,
+    "busiest_rate": 800,
+    "busiest_stampede": 41,
+    "slowest_origin_ms": 200,
+    "slowest_origin_stampede": 41,
+    "worst_hit_rate": 0.728333,
+    "best_hit_rate": 0.95,
+    "ttl_stampede": 11,
+    "short_ttl": 0.25,
+    "long_ttl": 2.0,
+    "short_ttl_hit_rate": 0.842,
+    "long_ttl_hit_rate": 0.973,
+    "short_ttl_calls": 316,
+    "long_ttl_calls": 54,
+    "calls_reduction": 5.9,
+    "naive_hot_stampede": 11,
+    "jittered_hot_stampede": 11,
+    "single_flight_stalled": 0.055,
+    "early_stalled": 0.0175,
+    "early_stale_serves": 48,
+    "stall_reduction": 3.14,
+    "many_keys": 20,
+    "naive_many_peak": 69,
+    "jittered_many_peak": 16,
+    "jitter_peak_reduction": 4.31,
+    "illustrative_rate": 1000,
+    "illustrative_ttl": 60,
+    "illustrative_stampede": 51,
+    "illustrative_hit_rate": 0.999151,
+    "tests": 85
+  },
+  "display": {
+    "worst_hit_rate": "72.8%",
+    "best_hit_rate": "95.0%",
+    "short_ttl": "0.25",
+    "long_ttl": "2",
+    "short_ttl_hit_rate": "84.2%",
+    "long_ttl_hit_rate": "97.3%",
+    "calls_reduction": "5.9",
+    "single_flight_stalled": "5.50%",
+    "early_stalled": "1.75%",
+    "stall_reduction": "3.1",
+    "jitter_peak_reduction": "4.31",
+    "illustrative_hit_rate": "99.92%",
+    "base_rate": "200",
+    "base_origin_ms": "50",
+    "base_stampede": "11",
+    "busiest_rate": "800",
+    "busiest_stampede": "41",
+    "slowest_origin_ms": "200",
+    "slowest_origin_stampede": "41",
+    "ttl_stampede": "11",
+    "short_ttl_calls": "316",
+    "long_ttl_calls": "54",
+    "naive_hot_stampede": "11",
+    "jittered_hot_stampede": "11",
+    "early_stale_serves": "48",
+    "many_keys": "20",
+    "naive_many_peak": "69",
+    "jittered_many_peak": "16",
+    "illustrative_rate": "1000",
+    "illustrative_ttl": "60",
+    "illustrative_stampede": "51",
+    "tests": "85"
+  },
+  "anchors": {
+    "base_rate": [
+      "{} requests a second"
+    ],
+    "base_origin_ms": [
+      "an origin taking {} ms"
+    ],
+    "base_stampede": [
+      "{} requests reach it at once"
+    ],
+    "busiest_rate": [
+      "at {} requests a second"
+    ],
+    "busiest_stampede": [
+      "becomes {}"
+    ],
+    "slowest_origin_ms": [
+      "an origin at {} ms"
+    ],
+    "slowest_origin_stampede": [
+      "also {}"
+    ],
+    "worst_hit_rate": [
+      "never fell below {}"
+    ],
+    "best_hit_rate": [
+      "as high as {}"
+    ],
+    "ttl_stampede": [
+      "stayed at {} calls"
+    ],
+    "short_ttl": [
+      "from {} seconds"
+    ],
+    "long_ttl": [
+      "to {} seconds"
+    ],
+    "short_ttl_hit_rate": [
+      "hit rate climbed from {}"
+    ],
+    "long_ttl_hit_rate": [
+      "to a hit rate of {}"
+    ],
+    "short_ttl_calls": [
+      "{} origin calls"
+    ],
+    "long_ttl_calls": [
+      "down to {}"
+    ],
+    "calls_reduction": [
+      "{}x fewer calls"
+    ],
+    "naive_hot_stampede": [
+      "admits {} calls per refresh"
+    ],
+    "jittered_hot_stampede": [
+      "jitter gives {}"
+    ],
+    "single_flight_stalled": [
+      "made {} of requests wait"
+    ],
+    "early_stalled": [
+      "waits to {}"
+    ],
+    "early_stale_serves": [
+      "{} values served"
+    ],
+    "stall_reduction": [
+      "{}x fewer requests"
+    ],
+    "many_keys": [
+      "{} keys filled together"
+    ],
+    "naive_many_peak": [
+      "peaks at {} simultaneous"
+    ],
+    "jittered_many_peak": [
+      "down to {} simultaneous"
+    ],
+    "jitter_peak_reduction": [
+      "{}x reduction"
+    ],
+    "illustrative_rate": [
+      "at {} requests a second"
+    ],
+    "illustrative_ttl": [
+      "a {} second TTL"
+    ],
+    "illustrative_stampede": [
+      "{} simultaneous calls"
+    ],
+    "illustrative_hit_rate": [
+      "a hit rate of {}"
+    ],
+    "tests": [
+      "{} tests"
+    ]
+  },
+  "checked_documents": [
+    "README.md",
+    "docs/adr/ADR-001-four-caches-and-a-slow-origin.md",
+    "docs/adr/ADR-002-an-open-loop-and-a-pool-that-never-filled.md",
+    "docs/adr/ADR-003-three-scenarios-that-had-to-be-built-right.md",
+    "docs/adr/ADR-004-what-this-cannot-measure.md"
+  ]
+}

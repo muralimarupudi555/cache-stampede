@@ -1,0 +1,112 @@
+{
+  "experiment": "e1_the_stampede_factor",
+  "ttl_seconds": 0.5,
+  "duration_seconds": 3.0,
+  "by_rate": [
+    {
+      "request_rate": 100.0,
+      "origin_seconds": 0.05,
+      "stampede_size": 6,
+      "typical_stampede": 6.0,
+      "predicted": 6,
+      "agrees": true,
+      "origin_calls": 29,
+      "peak_concurrency": 6,
+      "hit_rate": 0.903333,
+      "pool_saturated": false
+    },
+    {
+      "request_rate": 200.0,
+      "origin_seconds": 0.05,
+      "stampede_size": 11,
+      "typical_stampede": 11.0,
+      "predicted": 11,
+      "agrees": true,
+      "origin_calls": 55,
+      "peak_concurrency": 11,
+      "hit_rate": 0.908333,
+      "pool_saturated": false
+    },
+    {
+      "request_rate": 400.0,
+      "origin_seconds": 0.05,
+      "stampede_size": 21,
+      "typical_stampede": 21.0,
+      "predicted": 21,
+      "agrees": true,
+      "origin_calls": 104,
+      "peak_concurrency": 21,
+      "hit_rate": 0.913333,
+      "pool_saturated": false
+    },
+    {
+      "request_rate": 800.0,
+      "origin_seconds": 0.05,
+      "stampede_size": 42,
+      "typical_stampede": 41.0,
+      "predicted": 41,
+      "agrees": true,
+      "origin_calls": 206,
+      "peak_concurrency": 42,
+      "hit_rate": 0.914167,
+      "pool_saturated": false
+    }
+  ],
+  "by_latency": [
+    {
+      "request_rate": 200.0,
+      "origin_seconds": 0.02,
+      "stampede_size": 5,
+      "typical_stampede": 5.0,
+      "predicted": 5,
+      "agrees": true,
+      "origin_calls": 30,
+      "peak_concurrency": 5,
+      "hit_rate": 0.95,
+      "pool_saturated": false
+    },
+    {
+      "request_rate": 200.0,
+      "origin_seconds": 0.05,
+      "stampede_size": 11,
+      "typical_stampede": 11.0,
+      "predicted": 11,
+      "agrees": true,
+      "origin_calls": 54,
+      "peak_concurrency": 11,
+      "hit_rate": 0.91,
+      "pool_saturated": false
+    },
+    {
+      "request_rate": 200.0,
+      "origin_seconds": 0.1,
+      "stampede_size": 21,
+      "typical_stampede": 21.0,
+      "predicted": 21,
+      "agrees": true,
+      "origin_calls": 104,
+      "peak_concurrency": 21,
+      "hit_rate": 0.826667,
+      "pool_saturated": false
+    },
+    {
+      "request_rate": 200.0,
+      "origin_seconds": 0.2,
+      "stampede_size": 41,
+      "typical_stampede": 41.0,
+      "predicted": 41,
+      "agrees": true,
+      "origin_calls": 163,
+      "peak_concurrency": 41,
+      "hit_rate": 0.728333,
+      "pool_saturated": false
+    }
+  ],
+  "all_agree": true,
+  "pool_never_saturated": true,
+  "worst_stampede": 42,
+  "worst_hit_rate": 0.728333,
+  "best_hit_rate": 0.95,
+  "rate_doubling_ratio": 6.83,
+  "latency_doubling_ratio": 8.2
+}

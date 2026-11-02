@@ -1,0 +1,47 @@
+# The gate. It runs what `make verify` runs.
+#
+# The experiments are not run here. They drive real threads against a real clock, and a
+# shared runner that pauses mid-stampede would merge two refresh cycles into one cluster
+# and fail the build for infrastructure noise - which teaches everyone to re-run the job
+# until it goes green, and that is worse than not having it. What CI checks instead is the
+# arithmetic: the stampede factor is re-derived from theory.py and compared against the
+# committed measurements, and that claim holds on any machine.
+name: verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install
+        run: python -m pip install -e ".[dev]"
+
+      - name: Lint
+        run: python -m ruff check .
+
+      - name: Tests
+        run: python -m pytest
+
+      - name: The arithmetic still holds
+        run: python tools/check_laws.py
+
+      - name: Documents still match the measurements
+        run: |
+          python tools/render_tables.py
+          python tools/collect_metrics.py
+          python tools/check_numbers.py
+
+      - name: Nothing regenerated differs from what was committed
+        run: |
+          python tools/render_tables.py
+          git diff --exit-code README.md
